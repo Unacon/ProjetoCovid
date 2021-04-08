@@ -53,3 +53,7 @@ async function run(){
 };
 
 run();
+
+
+// var projection = d3.geoNaturalEarth2();
+console.log(d3.geoPath());
