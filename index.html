@@ -11,39 +11,45 @@
 <body>
   <h1>COVID</h1>
   <pre id='teste'></pre>
-  <div class="Country">
+  <section class="Country">
     <h2>BRAZIL</h2>
-    <div class='CountryDate'>- Confirmados: </div>
-    <div class='CountryDate'>- Recuperados: </div>
-    <div class='CountryDate'>- Falecidos: </div>
-  </div>
-  <div class="form">
+    <div class='CountryDate'></div>
+    <div class='CountryDate'></div>
+    <div class='CountryDate'></div>
+  </section>
+  <section class="form">
     <div>
       <label for="state">Cidade:</label>
       <select  id="state">
-        <option hidden disable selected value='null'>Selecione a Cidade</option>
-        <option value="Sao Paulo">Sao Paulo</option>
-        <option value="Rio de Janeiro">Rio de Janeiro</option>
-        <option value="Rio Grande do Norte">Rio Grande do Norte</option>
-      </select>
+        <option hidden disable selected value='null'>Selecione a Cidade</option>        
+      </select>     
       
-
-    </div>
-    <div>
+      <div>
       <input type="checkbox" id="confirmed" class='date'>
       <label for="confirmed">Confirmados</label>
+      </div>
+
+      <div>
+      <input type="checkbox" id="recovered" class='date'>
+      <label for="recovered">Recuperados</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="deaths" class='date'>
+        <label for="deaths">Falecidos</label>
+      </div>
+
+      <button id='button'>Confirmar</button>
+      <button id='reset'>Resetar</button>
     </div>
-    <div>
-      <input type="checkbox" id="recupered" class='date'>
-      <label for="recupered">Recuperados</label>
-    </div>
-    <div>
-      <input type="checkbox" id="deaths" class='date'>
-      <label for="deaths">Falecidos</label>
-    </div>
-    <button id='button'>Confirmar</button>
-    <button id='reset'>Resetar</button>
-  </div>
+  </section>
+  <section class='result'>
+    <div id='resultState'></div>
+    <div class="resultDate" id='resultConfirmed'></div>
+    <div class="resultDate" id='resultrecovered'></div>
+    <div class="resultDate" id='resultdeaths'></div>
+    
+  </section>
   
 
   <script src="./scripts/index.js"></script>
