@@ -25,11 +25,6 @@ body{
   flex-direction: column;  
 }
 
-h2{
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
 .space > .content{
   background: rgb(126, 126, 128);
 
@@ -39,19 +34,13 @@ h2{
 
   padding: 10px;
 }
-.space > .content .contentDate .dateResult {
-  display: flex;
-  flex-direction: column;
- 
+
+.space > .content h2{
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-.space > .content .contentDate .dateWorld {
-  display: flex;
-  flex-direction: column;
- 
-}
-
-.space > .content .contentDate{
+.space > .content > .ct .contentDate{
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -59,13 +48,28 @@ h2{
   
 }
 
-#ConfirmedDate{
+.space > .content > .ct > .contentDate .dateWorld {
+  display: flex;
+  flex-direction: column; 
+}
+
+.space > .content > .ct > .contentDate > .dateWorld #ConfirmedCountry, #ConfirmedWorld{
   color: yellow;
 }
-#RecuperedDate{
+.space > .content > .ct > .contentDate > .dateWorld #RecuperedWorld, #RecuperedCountry{
   color: green;
 }
-#DeathsDate{
+.space > .content > .ct > .contentDate > .dateWorld #DeathsWorld, #DeathsCountry{
+  color: red;
+}
+
+.space > .content > .result > .contentState > .dateResult #ConfirmedState{
+  color: yellow;
+}
+.space > .content > .result > .contentState > .dateResult #RecuperedState{
+  color: green;
+}
+.space > .content > .result > .contentState > .dateResult #DeathsState{
   color: red;
 }
 
@@ -104,8 +108,3 @@ button{
   padding: 5px;
 };
 
-.dateWorld{
-  display: flex;
-  color:red;
-  background-color: red;
-};
