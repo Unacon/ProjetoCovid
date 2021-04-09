@@ -5,53 +5,84 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/index.css">
-  
 
-  <title>Dados Covid-19</title>
+  <title>COVID-19</title>
 </head>
 <body>
-  <h1>COVID - <a href="https://covid19.mathdro.id/api">API</a></h1>
-
-  <pre id='teste'></pre>
-  <section class="Country">
-    <h2>BRAZIL</h2>
-    <div class='CountryDate'></div>
-    <div class='CountryDate'></div>
-    <div class='CountryDate'></div>
-  </section>
-  <section class="form">
-    <div>
-      <label for="state">Cidade:</label>
-      <select  id="state">
-        <option hidden disable selected value='null'>Selecione a Cidade</option>        
-      </select>     
-      
-      <div>
-      <input type="checkbox" id="confirmed" class='date'>
-      <label for="confirmed">Confirmados</label>
+  <div class="space">
+    <section class="content">
+      <h1>COVID-19 STATISTICS</h1>
+      <div class="world">
+        <h2>WORLD</h2>
+        <div class="contentDate">
+          <div class="dateWorld" id="ConfirmedWorld">Confirmed <span class="WorldDate" id="ConfirmedDate">50.000</span></div>
+          <div class="dateWorld" id="RecuperedWorld">Recupered <span class="WorldDate" id="RecuperedDate">50.000</span></div>
+          <div class="dateWorld" id="DeathsWorld">Deaths <span class="WorldDate" id="DeathsDate">50.000</span></div>
+        </div>
       </div>
-
-      <div>
-      <input type="checkbox" id="recovered" class='date'>
-      <label for="recovered">Recuperados</label>
+      <div class="Country">
+        <h2 id='nameCountry'>COUNTRY</h2>
+        <div class="contentDate">
+          <div class="dateWorld"> Confirmed <span class="CountryDate" id="ConfirmedDate">-</span>   </div>
+          <div class="dateWorld"> Recupered <span class="CountryDate" id="RecuperedDate">-</span>   </div>
+          <div class="dateWorld"> Deaths <span class="CountryDate" id="DeathsDate">-</span>         </div>
+        </div>
       </div>
+      <section class="form">    
+        <h2>Pesquisa</h2>
+        
+        <div class='select'>
+          <label for="country">Country:</label>
+          <select  id="country" class='selected'>
+                   
+          </select>
+        </div>
+        
+        <div class='select'>
+          <label for="state">State:</label>
+          <select  id="state" class='selected'>
+                   
+          </select> 
+        </div>        
 
-      <div>
-        <input type="checkbox" id="deaths" class='date'>
-        <label for="deaths">Falecidos</label>
-      </div>
+        <div class='box'>
+          <input type="checkbox" id="confirmed" class='date'>
+          <label for="confirmed">Confirmados</label>
+        </div>
 
-      <button id='button'>Confirmar</button>
-      <button id='reset'>Resetar</button>
-    </div>
-  </section>
-  <section class='result'>
-    <div id='resultState'></div>
-    <div class="resultDate" id='Confirmados'></div>
-    <div class="resultDate" id='Recuperados'></div>
-    <div class="resultDate" id='Falecidos'></div>
-    
-  </section>
+        <div class='box'>
+          <input type="checkbox" id="recovered" class='date'>
+          <label for="recovered">Recuperados</label>
+        </div>
+
+        <div class='box'>
+          <input type="checkbox" id="deaths" class='date'>
+          <label for="deaths">Falecidos</label>
+        </div>
+
+        <div class='box'>
+          <button id='button'>Confirmar</button>
+          <button id='reset'>Resetar</button> 
+        </div>         
+      </section>
+      <section class='result'>
+        <h2 id='resultState'></h2>
+        <div class="contentDate">
+          <div class="dateResult"> 
+            <span class="resultDate" id='ConfirmedDate'></span>
+          </div>
+          <div class="dateResult"> 
+            <span class="resultDate" id='RecuperedDate'></span>
+          </div>
+          <div class="dateResult"> 
+            <span class="resultDate" id='DeathsDate'></span>
+          </div>
+        </div>             
+      </section>
+    </section>
+
+    <footer></footer>
+  </div> 
   
   <script type="text/javascript" src="node_modules/d3/dist/d3.js"></script>
   <script src="./scripts/index.js" type="module"></script>
