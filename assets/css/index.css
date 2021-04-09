@@ -78,6 +78,15 @@ h2{
   width: 100%;
 }
 
+.space > .content > .form .select #selectCountry{
+  margin-right: 32px;
+}
+
+.space > .content > .form > #stateSelect > #selectCountry{
+  margin-right: 10px;
+}
+
+
 .space > .content > .form{
   display: flex;
   flex-direction: column;
@@ -100,5 +109,3 @@ button{
   color:red;
   background-color: red;
 };
-
-
