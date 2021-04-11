@@ -82,21 +82,20 @@ export function authenticateInput(){
 
 //Mostra os dados que o cliente deseja no front-end
 export function outputDate(stateResult){     
-  dateResultElement.forEach((result) => result.style.display = 'block');             
-    resultStateElement.innerHTML = `${stateResult.provinceState} `;// Estado
-    dateElement.forEach((box,key) =>{
-      //Mostra somente os dados selecionados
-      
-      
-      if(box.checked){   
-              
-        if(stateResult[box.id] === null){          
-          resultDateElement[key].innerHTML = `- ${resultDateElement[key].id}: Sem informações`;                  
-        }else{               
-          resultDateElement[key].innerHTML = `${stateResult[box.id].toLocaleString()}`;                      
-        }
-      };
-    });
+  // dateResultElement.forEach((result) => result.style.display = 'block');             
+  resultStateElement.innerHTML = `${stateResult.provinceState} `;// Estado
+  dateElement.forEach((box,key) =>{
+    //Mostra somente os dados selecionados    
+    if(box.checked){   
+      dateResultElement[key].style.display = 'block';
+        
+      if(stateResult[box.id] === null){          
+        resultDateElement[key].innerHTML = `- ${resultDateElement[key].id}: Sem informações`;                  
+      }else{               
+        resultDateElement[key].innerHTML = `${stateResult[box.id].toLocaleString()}`;                      
+      }
+    };
+  });
 };
 
 //EVENTO DO BOTÃO "RESETAR"
